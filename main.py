@@ -2,6 +2,7 @@ import argparse
 import logging
 from logging.handlers import RotatingFileHandler
 import sys
+
 import pandas as pd
 
 from processing import prepare_data
@@ -41,20 +42,3 @@ def main(argv=None):
 
 if __name__ == "__main__":
     main(sys.argv[1:])
-
-
-"""
-- The project should be stored in GitHub and you should only commit relevant files to the repo.
-V Save the output in a **client_data** directory in the root directory of the project.
-- Add a **README** file explaining on a high level what the application does.
-V Application should receive three arguments, the paths to each of the dataset files and also the countries to filter as the client wants to reuse the code for other countries.
-V Use **logging**.
-- Create generic functions for filtering data and renaming.
-Recommendation: Use the following package for Spark tests - https://github.com/MrPowers/chispa
-- If possible, have different branches for different tasks that once completed are merged to the main branch. Follow the GitHub flow - https://guides.github.com/introduction/flow/.
-- **Bonus** - If possible it should have an automated build pipeline using  https://www.travis-ci.com/ for instance.
-V **Bonus** - If possible log to a file with a rotating policy.
-- **Bonus** - Code should be able to be packaged into a source distribution file.
-- **Bonus** - Requirements file should exist.
-- **Bonus** - Document the code with docstrings as much as possible using the reStructuredText (reST) format.
-"""
